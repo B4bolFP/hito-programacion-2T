@@ -1,0 +1,133 @@
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+body {
+    background-color: #282b30;
+}
+
+a {text-decoration: none;}
+
+h2 {
+    text-decoration: underline;
+}
+
+.header-container {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #1e2124;
+    color: #7289da;
+    font-weight: 700;
+}
+
+.header-menu {
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-menu-user {
+    width: 18%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-menu-button {
+    cursor: pointer;
+    font-size: 1.6rem;
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+    background-color: rgb(88, 101, 242);
+    transition: background-color .17s ease,color .17s ease;
+}
+
+.header-menu-button:hover {
+    background-color: rgb(57, 65, 149);
+}
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem auto;
+    border-radius: 0.3rem;
+    width: 75%;
+    background-color: #36393e;
+}
+
+.body-section-container {
+    width: 80%;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+footer {
+    height: 2rem;
+    background-color: #1e2124;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-container-entradas {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e2124;
+    color: #7289da;
+    font-weight: 700;
+}
+
+.home-entradas {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-menu{
+    height: 2.7rem;
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-menu-button {
+    cursor: pointer;
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+    background-color: rgb(88, 101, 242);
+    transition: background-color .17s ease,color .17s ease;
+}
+
+.section-menu-button:hover {
+    background-color: rgb(57, 65, 149);
+}
+
+.section-menu-button-borrar {
+    cursor: pointer;
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+    background-color: rgb(242, 88, 88);
+    transition: background-color .17s ease,color .17s ease;
+}
+
+.section-menu-button-borrar:hover {
+    background-color: rgb(149, 57, 57);
+}
