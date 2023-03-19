@@ -1,5 +1,5 @@
 <?php
-
+// clase usuario gestiona la tabla usuarios
 class Usuario {
     private $link;
 
@@ -8,7 +8,7 @@ class Usuario {
         $this->link = new Conexion;
     }
 
-    public function getUser($usuario, $password) {
+    public function getUser($usuario, $password) { // sacamos un usuario por id
         $sql = "SELECT * FROM `usuarios` WHERE `usuarios`.`usuario` = '$usuario' AND `usuarios`.`password` = '$password'";
         return $this->link->executeQuery($sql);
     }

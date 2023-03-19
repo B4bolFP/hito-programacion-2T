@@ -20,6 +20,8 @@
         <h1>Hito individual, Programación</h1>
         <div class="body-section-container">
             <?php
+                // mostramos los datos de la tabla articulo
+                
                 require_once '../clases/articulos.php';
                 $a = new Articulo;
 

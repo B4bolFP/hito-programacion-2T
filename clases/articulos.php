@@ -1,5 +1,5 @@
 <?php
-
+// Clase articulo esta clase se encarga de todas las funciones que afectan de cualquier forma a la tabla articulos.
 class Articulo {
     private $link;
 
@@ -8,7 +8,7 @@ class Articulo {
         $this->link = new Conexion;
     }
 
-    public function select() {
+    public function select() { // Funcion para consultar la tabla articulos
         $sql = "SELECT `id`, `titulo`, `subtitulo`, `contenido` FROM `articulos`";
         $registros = $this->link->executeQuery($sql);
 
@@ -27,28 +27,27 @@ class Articulo {
         }
     }
     
-    public function newArticulo($titulo, $subtitulo, $contenido) {
+    public function newArticulo($titulo, $subtitulo, $contenido) { // Añadir datos a la tabla
         $sql = "INSERT INTO `articulos` (`titulo`, `subtitulo`, `contenido`) VALUES ('$titulo', '$subtitulo', '$contenido');";
         $this->link->executeQuery($sql);
     }
 
-    public function getRow_by_Id($id) {
+    public function getRow_by_Id($id) { // obtener una fila for id en forma de array
         $sql = "SELECT `id`, `titulo`, `subtitulo`, `contenido` FROM `articulos` WHERE `articulos`.`id` = $id";
 
         $registros = $this->link->executeQuery($sql); 
-        $row = mysqli_fetch_array($registros);
+        $row = mysqli_fetch_array($registros); // convierte la fila en un array
 
         return $row;
     }
 
-    public function update_by_Id($id, $titulo, $subtitulo, $contenido) {
-        $sql = "UPDATE `articulos` 
-        SET `titulo` = '$titulo', `subtitulo` = '$subtitulo', `contenido` = '$contenido' WHERE `articulos`.`id` = $id;";
+    public function update_by_Id($id, $titulo, $subtitulo, $contenido) { // actualizar datos por id
+        $sql = "UPDATE `articulos` SET `titulo` = '$titulo', `subtitulo` = '$subtitulo', `contenido` = '$contenido' WHERE `articulos`.`id` = $id;";
 
         $this->link->executeQuery($sql);
     }
 
-    public function delete_by_Id($id) {
+    public function delete_by_Id($id) { // borrar fila por id
         $sql = "DELETE FROM articulos WHERE `articulos`.`id` = $id";
         
         $this->link->executeQuery($sql);

@@ -15,6 +15,8 @@
         <form action="../php/c_editar.php" method="POST">
 
           <?php
+            // obtenemos los campos de la base de datos y cambiamos el value por la sentencia php que contiene los datos de la bdd
+
             require_once '../clases/articulos.php';
             $articulo = new Articulo;
 

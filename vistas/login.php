@@ -11,7 +11,9 @@
 </head>
 <body>
 
-    <?php 
+    <?php
+      // Este apartado en el login se usa para que si en las cookies tenemos guardados los datos de incio de sesion nos meta directamente
+
       require '../clases/usuarios.php';
       $u = new Usuario;
       if (isset($_COOKIE['username']) AND isset($_COOKIE['password'])) {
